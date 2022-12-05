@@ -19,6 +19,11 @@ import {
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { AppState } from 'react-native'
+import { navigationRef } from './src/utils/Navigation/RootNavigation'
+import HomeScreen from './src/screens/HomeScreen'
+import CalendarScreen from './src/screens/CalendarScreen'
+import LibraryScreen from './src/screens/LibraryScreen'
+import MyPageScreen from './src/screens/MyPageScreen'
 
 const Stack = createNativeStackNavigator()
 
@@ -44,34 +49,99 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <StatusBar />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <Header />
-        <View>
-          <Text>초기 앱.js 셋팅</Text>
-        </View>
-      </ScrollView>
+      <NavigationContainer
+        theme={{ colors: { background: 'white' } }}
+        ref={navigationRef}
+      >
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            // cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+            transitionSpec: {
+              open: config,
+              close: config,
+            },
+            gestureEnabled: false,
+
+            cardStyleInterpolator: forFade,
+            // cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+          }}
+        >
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              headerShown: false,
+              // cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+              headerStyle: { backgroundColor: 'red' },
+              transitionSpec: {
+                open: config,
+                close: config,
+              },
+              cardStyleInterpolator: forFade,
+            }}
+          />
+          <Stack.Screen
+            name="Calendar"
+            component={CalendarScreen}
+            options={{
+              headerShown: false,
+              // cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+              headerStyle: { backgroundColor: 'red' },
+              transitionSpec: {
+                open: config,
+                close: config,
+              },
+              cardStyleInterpolator: forFade,
+            }}
+          />
+
+          <Stack.Screen
+            name="Library"
+            component={LibraryScreen}
+            options={{
+              headerShown: false,
+              // cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+              headerStyle: { backgroundColor: 'red' },
+              transitionSpec: {
+                open: config,
+                close: config,
+              },
+              cardStyleInterpolator: forFade,
+            }}
+          />
+          <Stack.Screen
+            name="MyPage"
+            component={MyPageScreen}
+            options={{
+              headerShown: false,
+              // cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+              headerStyle: { backgroundColor: 'red' },
+              transitionSpec: {
+                open: config,
+                close: config,
+              },
+              cardStyleInterpolator: forFade,
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  title: {
+    fontSize: 30,
   },
 })
+
+
 
 export default App
