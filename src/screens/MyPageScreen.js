@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react'
 
-const { View } = require('react-native')
+const { View, Text } = require('react-native')
 
 const MyPageScreen = () => {
-  return <View></View>
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>MyPage</Text>
+    </View>
+  )
 }
 
 export default MyPageScreen

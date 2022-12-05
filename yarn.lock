@@ -3491,11 +3491,6 @@
   "resolved" "https://registry.npmjs.org/flow-parser/-/flow-parser-0.194.0.tgz"
   "version" "0.194.0"
 
-"fontisto@^3.0.4":
-  "integrity" "sha512-9oo40frIo8SB5MRMrgiA9xNdYPvHAyLdG4i7XzfWnAAf92I73yrnmqmApmaPmcjNQknhORkrWWFJ+i1D/9YdGQ=="
-  "resolved" "https://registry.npmjs.org/fontisto/-/fontisto-3.0.4.tgz"
-  "version" "3.0.4"
-
 "for-in@^1.0.2":
   "integrity" "sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ=="
   "resolved" "https://registry.npmjs.org/for-in/-/for-in-1.0.2.tgz"

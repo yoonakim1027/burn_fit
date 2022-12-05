@@ -19,33 +19,19 @@ const Tab = createBottomTabNavigator()
 
 const TabNavigation = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Tab.Screen
         name="home"
         component={HomeScreen}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <View
-              style={
-                Platform.OS === 'ios'
-                  ? {
-                      width: '32.5%',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      top: verticalScale(15),
-                      elevation: 0,
-                      zIndex: 10,
-                      position: 'absolute',
-                    }
-                  : {}
-              }
-            >
-              <Fontisto name="home" size={30} />
-            </View>
-          ),
-          tabBarActiveTintColor: 'black',
-          tabBarInactiveTintColor: 'gray',
-        }}
+        // options={{
+        //   tabBarIcon: ({ color }) => (
+        //     <View>{/* <Fontisto name="mad" size={30} /> */}</View>
+        //   ),
+        // }}
       ></Tab.Screen>
       <Tab.Screen name="calendar" component={CalendarScreen} />
       <Tab.Screen name="library" component={LibraryScreen} />
