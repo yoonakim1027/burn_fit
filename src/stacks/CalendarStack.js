@@ -3,14 +3,14 @@ import {
   createStackNavigator,
   CardStyleInterpolators,
 } from '@react-navigation/stack'
-import MyPageScreen from '../screens/MyPageScreen'
+import CalendarScreen from '../screens/CalendarScreen'
 
 const Stack = createStackNavigator()
 
-function MyPageStack() {
+function CalendarStack() {
   return (
     <Stack.Navigator
-      initialRouteName="MyPage"
+      initialRouteName="Calendar"
       activeColor="#e91e63"
       labelStyle={{ fontSize: 12 }}
       screenOptions={{
@@ -18,9 +18,9 @@ function MyPageStack() {
         gestureEnabled: false,
       }}
     >
-      <Stack.Screen name="MyPage" component={MyPageScreen} />
+      <Stack.Screen name="Calendar" component={CalendarScreen} />
     </Stack.Navigator>
   )
 }
 
-export default MyPageStack
+export default CalendarStack
