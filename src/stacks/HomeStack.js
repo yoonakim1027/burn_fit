@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from '@react-navigation/stack'
+import { createStackNavigator } from '@react-navigation/stack'
 import HomeScreen from '../screens/HomeScreen'
 
 const Stack = createStackNavigator()
@@ -10,15 +7,15 @@ const Stack = createStackNavigator()
 function HomeStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Home"
-      activeColor="#e91e63"
+      initialRouteName="Main"
+      activeColor="black"
       labelStyle={{ fontSize: 12 }}
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
       }}
     >
-      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Main" component={HomeScreen} />
     </Stack.Navigator>
   )
 }

@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-  createStackNavigator,
-  CardStyleInterpolators,
-} from '@react-navigation/stack'
+import { createStackNavigator } from '@react-navigation/stack'
 import LibraryScreen from '../screens/LibraryScreen'
 
 const Stack = createStackNavigator()
@@ -11,7 +8,7 @@ function LibraryStack() {
   return (
     <Stack.Navigator
       initialRouteName="Library"
-      activeColor="#e91e63"
+      activeColor="black"
       labelStyle={{ fontSize: 12 }}
       screenOptions={{
         headerShown: false,
